@@ -1,0 +1,19 @@
+{{define "/billdetail"}}
+{{template "header"}}
+</head>
+<body>
+<div class="page-content">
+    <div class="row">
+        <div class="col-xs-12">
+            <table id="jqGrid"></table>
+            <div id="jqGridPager"></div>
+        </div>
+    </div>
+</div>
+
+{{template "script"}}
+<script src="//cdn.bootcss.com/lodash.js/4.13.1/lodash.min.js"></script>
+<script src="/layer/layer.js"></script>
+<script src="/js/billdetail.js"></script>
+{{template "footer"}}
+{{end}}

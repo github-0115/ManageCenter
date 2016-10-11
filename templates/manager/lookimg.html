@@ -1,0 +1,81 @@
+{{define "/lookimg"}}
+{{template "header"}}
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="http://cdn.bootcss.com/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.min.css" rel="stylesheet">
+<link href="/css/pagination.css" rel="stylesheet">
+{{template "nav"}}
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-camera  active"></i>
+                <a href="#">用户图片列表</a>
+            </li>
+        </ul>
+    </div>
+    <div id="page_content" class="page-content">
+     <div>
+                    <input id="autocomplete-search" class="searchtext" style="margin-bottom: 20px;height: 35px;float:left;
+                    font-size: 15px;  vertical-align: bottom;" placeholder="输入您想查看用户名">
+                        <button class="bigger-120 btn-info btn btn-sm " id="search" style="float:left;margin-bottom: 20px"><i class="icon-search"></i>搜索</button>
+                    </input>
+                </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- PAGE CONTENT BEGINS -->
+                <div id="psnselect">
+                    <div id="imgtype" class="type"><span style="font-size: 20px;">快速分类</span>
+                       <!-- <button id="typen" class=" btn btn-success btn-sm">正常</button>--><button id="types" class=" btn btn-warning btn-sm">性感</button><button id="typep" class=" btn btn-danger btn-sm">色情</button><button id="type_screen" class=" btn btn-purple btn-sm">拍屏</button>
+                        <div class="reviewcheck"><span style="font-size: 20px; margin-right: 40px">筛 选:</span><input
+                                type="radio" checked="checked" class="checktype toradio" >显示已确定&nbsp;&nbsp; <input type="radio"  class="showreview toradio ">显示复审
+                        </div>
+                    </div>
+                    <div id="time">
+                        <span style="font-size: 20px;"><i class="icon-calendar"></i></span><input
+                            id="datetimepicker" class="timedata" type="text" placeholder="点击选择时间" style="width: 150px;">
+                    </div>
+                    <div id="sortimg"><span style="font-size: 20px;">时间排序:<button id="timeup" class="btn btn-info btn-sm" style="display: none"><i
+                            class="icon-double-angle-up bigger-120"></i>升序
+                    </button><button class="btn btn-info btn-sm" id="timedown" ><i
+                            class="icon-double-angle-down bigger-120" ></i>降序
+                    </button><span style="font-size: 20px;">分数排序:<button id="up" class="btn btn-info btn-sm" style="display: none"><i
+                            class="icon-double-angle-up bigger-120"></i>升序
+                    </button><button class="btn btn-info btn-sm" id="down" ><i
+                            class="icon-double-angle-down bigger-120" ></i>降序
+                    </button>
+
+                    </div>
+
+
+                </div>
+                <div id="img" class="img-display">
+                </div>
+                <div id="Pagination" class="pagination"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+    <i class="icon-double-angle-up icon-only bigger-110"></i>
+</a>
+</div>
+
+{{template "script"}}
+<script src="//cdn.bootcss.com/lodash.js/4.13.1/lodash.min.js"></script>
+<script src="/js/loadingoverlay.min.js"></script>
+<script src="/assets/js/jquery.colorbox-min.js"></script>
+<script type="text/javascript" src="/js/pagination.js"></script>
+<script src="http://cdn.bootcss.com/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.js"></script>
+<script type="text/javascript" src="/js/jquery.autocomplete.js"></script>
+<script src="/js/view.js"></script>
+{{template "footer"}} 
+{{end}}
+
+

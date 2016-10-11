@@ -1,0 +1,56 @@
+{{define "/apiset"}}
+{{template "header"}}
+<style>
+    p.title{
+        width:175px;
+    }
+</style>
+{{template "nav"}}
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-cogs"></i>
+                <a href="#">系统配置</a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="page-content">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="apisetbox">
+                    <div class="apisetting"><p class="title">默认单价</p><input class="num" id="price"> <span> 元/万张</span></div>
+                    <div class="apisetting"><p class="title">默认当月总用量</p><input class="num" id="monthtotal"> <span> 次</span><span class="tip">注意：该量仅对非免费用户有效。</span></div>
+                    <div class="apisetting"><p class="title">默认并发总数</p><input class="num" id="monthtogethertoatl"></div>
+                    <div class="apisetting"><p class="title">账单失效时间</p><input class="num" id="outtime"><span> 天</span></div>
+
+                    <span class="title">免费用户</span>
+                    <div class="apisetting"><p class="title">免费用户每天使用总量</p><input class="num" id="daytotal"> <span> 次</span></div>
+                    <div class="apisetting"><p class="title">免费用户并发总数</p><input class="num" id="daytogethertotal"></div>
+                    <button id="saveapisetting"  class="btn-success btn btn-sm">保存配置</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+    <i class="icon-double-angle-up icon-only bigger-110"></i>
+</a>
+{{template "script"}}
+<script src="/js/apiset.js"></script>
+<script src="/layer/layer.js"></script>
+{{template "footer"}}
+
+{{end}}

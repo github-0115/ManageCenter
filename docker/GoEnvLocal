@@ -1,0 +1,6 @@
+FROM golang 
+
+COPY ./src /go/src
+
+
+

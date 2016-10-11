@@ -1,0 +1,44 @@
+{{define "/detail"}}
+{{template "header"}}
+{{template "nav"}}
+        <div class="main-content">
+            <div class="breadcrumbs" id="breadcrumbs">
+                <script type="text/javascript">
+                    try {
+                        ace.settings.check('breadcrumbs', 'fixed')
+                    } catch (e) {}
+                </script>
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="#">主页</a>
+                    </li>
+                    <li>
+                        <a href="#">数据中心</a>
+                    </li>
+                    <li class="active">详细数据统计</li>
+                </ul>
+            </div>
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <input id="company" class="search-query company"><button class="btn-info " id="searchresp"><i class="icon-search"></i>搜索</button></input>
+                        <table id="jqGrid"></table>
+                        <div id="jqGridPager"class="col-xs-12"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="icon-double-angle-up icon-only bigger-110"></i>
+    </a>
+</div>
+{{template "script"}}
+<script src="//cdn.bootcss.com/lodash.js/4.13.1/lodash.min.js"></script>
+<script src="/js/searchresp.js"></script>
+
+{{template "footer"}}
+{{end}}
+

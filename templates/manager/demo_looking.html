@@ -1,0 +1,72 @@
+{{define "manager/demo_looking"}}
+{{template "header"}}
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="http://cdn.bootcss.com/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.min.css" rel="stylesheet">
+<link href="/css/pagination.css" rel="stylesheet">
+{{template "nav"}}
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-camera  active"></i>
+                <a href="#">demo图片列表</a>
+            </li>
+        </ul>
+    </div>
+    <div id="page_content" class="page-content">
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- PAGE CONTENT BEGINS -->
+                <div id="imgtype" class="type"><span style="font-size: 20px;">快速分类</span>
+                        <button id="identify" class=" btn btn-success btn-sm">鉴黄</button><button id="faces" class=" btn btn-warning btn-sm">人脸</button>
+                </div>
+                <div class="reviewcheck" style="display:none"><span style="font-size: 20px; margin-right: 40px">筛 选:</span>
+                    <input type="radio" checked="checked" class="checktype">人脸框&nbsp;&nbsp;
+                    <input type="radio"  class="showreview">人脸点
+                </div>
+                <div id="psnselect">
+                    <div id="imgtype" class="type"><span style="font-size: 20px;"></span>
+                    </div>
+                    <div id="time">
+                        <span style="font-size: 20px;"><i class="icon-calendar"></i></span><input
+                            id="datetimepicker" class="timedata" type="text" placeholder="点击选择时间" style="width: 150px;">
+                    </div>
+                    <div id="sortimg"><span style="font-size: 20px;">时间排序:<button id="timeup" class="btn btn-info btn-sm" style="display: none"><i
+                            class="icon-double-angle-up bigger-120"></i>升序
+                    </button><button class="btn btn-info btn-sm" id="timedown" ><i
+                            class="icon-double-angle-down bigger-120" ></i>降序
+                    </div>
+
+
+                </div>
+                <div id="img" class="img-display">
+                </div>
+                <div id="Pagination" class="pagination"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+    <i class="icon-double-angle-up icon-only bigger-110"></i>
+</a>
+</div>
+
+{{template "script"}}
+<script src="//cdn.bootcss.com/lodash.js/4.13.1/lodash.min.js"></script>
+<script src="/js/loadingoverlay.min.js"></script>
+<script src="/assets/js/jquery.colorbox-min.js"></script>
+<script type="text/javascript" src="/js/pagination.js"></script>
+<script src="http://cdn.bootcss.com/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.js"></script>
+<script type="text/javascript" src="/js/jquery.autocomplete.js"></script>
+<script src="/js/demo_view.js"></script>
+{{template "footer"}} 
+{{end}}
+
+

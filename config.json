@@ -1,0 +1,18 @@
+{
+    "login_secret": "9c36c69e053f11e68ba5ac87a31a4093",
+	"api_secret": "66cadc42add44147a5e3ab83b7dcfb4a",
+    "login_token_expire": 24,
+    "api_token_expire": 24,
+    "manager_username": "deepir",
+    "manager_password": "deepir1234",
+    "log_dir": "log",
+    "domain": "http://statsimgs.oss-cn-hangzhou.aliyuncs.com/",
+	
+	"mail": {
+        "username": "service@deepir.com",
+        "password": "ST1234zxc7890",
+        "host": "smtp.exmail.qq.com",
+        "port": 465
+    }
+	
+}

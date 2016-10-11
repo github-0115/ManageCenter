@@ -1,0 +1,14 @@
+FROM goenv_managecenter
+
+COPY $PWD /go/src/ManageCenter
+
+
+RUN cd /go/src/ManageCenter && \
+    go build && \
+    mv ManageCenter / && \
+    mv templates / && \
+    rm -rf /go/src 
+
+WORKDIR /
+
+CMD ["/ManageCenter"]

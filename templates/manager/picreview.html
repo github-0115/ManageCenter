@@ -1,0 +1,67 @@
+{{define "/picreview"}}
+{{template "header"}}
+{{template "nav"}}
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-bar-chart"></i>
+            </li>
+            <li>
+                <a href="#">统计中心</a>
+            </li>
+            <li class="active">数据统计</li>
+        </ul>
+    </div>
+    <div class="page-content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="widget-box transparent">
+                            <div class="htmleaf-container">
+                                <ul id="title-ul" class="htmleaf-ul">
+                                    <li id="title-pic">实时图片复审率</li>
+                                    <li id="title-room">实时房间复审率</li>
+                                    <li id="title-miss">漏检率</li>
+                                    <li class="slider"></li>
+                                </ul>
+                                <div>
+                                    <input id="autocomplete-search" class="searchtext" style="margin-top: 25px;height: 35px;float:right;
+    font-size: 15px;  vertical-align: bottom;" placeholder="输入您想查看用户名">
+                                    <button class="bigger-120 btn-info btn btn-sm " id="search"
+                                            style="float:right;margin-top: 25px"><i class="icon-search"></i>搜索
+                                    </button>
+                                    </input>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <div class="widget-main padding-4">
+                                    <div id="picreview" style="height: 600px;width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+    <i class="icon-double-angle-up icon-only bigger-110"></i>
+</a>
+</div>
+{{template "script"}}
+{{template "chart"}}
+<script src="//cdn.bootcss.com/lodash.js/4.13.1/lodash.min.js"></script>
+<script type="text/javascript" src="/js/realtime.js"></script>
+<script type="text/javascript" src="/js/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="/js/title.js"></script>
+{{template "footer"}}
+{{end}}

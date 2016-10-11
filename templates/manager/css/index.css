@@ -1,0 +1,200 @@
+.container { width: 800px; margin: 0 auto; }
+
+.autocomplete-suggestions { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid #999; background: #FFF; cursor: default; overflow: auto; -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-no-suggestion { padding: 2px 5px;}
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: bold; color: #000; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { font-weight: bold; font-size: 16px; color: #000; display: block; border-bottom: 1px solid #000; }
+
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"], textarea {
+    background: #F4F6F7;
+    border: #FFFFFF;
+    margin: 0;
+    outline: 0;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    background-color: rgba(255, 255, 255, 0.1);
+     color: grey;
+    text-indent: 8px;
+}
+
+div#imgtype {
+    margin-right: auto;
+}
+div#psnselect {
+    display: flex;
+}
+
+.box {
+    display: inline-block;
+    border-radius: 5px;
+    margin: 10px;
+    width: auto;
+    height: auto;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0,0.25);
+}
+
+.result-bg-red , .result-bg-green, .result-bg-yellow,.result-bg-purple{
+    display: inline-block;
+    padding: 3px 5px ;
+}
+span.result-bg-red {
+    background: #d15b47;
+    color: white;
+}
+span.result-bg-yellow {
+    background: #ffb752;
+    color: white;
+}
+span.result-bg-purple {
+    background: #9585bf;
+    color: white;
+}
+.label>span, .label>[class*="icon-"] {
+    line-height: 1;
+    vertical-align: inherit;
+}
+.result-bg-danger {
+    color: gray;
+    margin: inherit;
+    float: right;
+}
+
+.result-bg-green{
+   color: green;
+}
+.result-bg-yellow {
+    color: gray;
+}
+span.result-bg-yellow {
+    float: left;
+}
+span.result-bg-red {
+    float: left;
+}
+span.result-bg-purple {
+    float: left;
+}
+
+button#deposit,button#invoice {
+    display: block;
+    margin: auto;
+    margin-top: 90px;
+    border-radius: 5px;
+}
+.invoice-list {
+    display: block;
+    float: right;
+    margin-right: 20px;
+    margin-top: -28px;
+    font-size: 18px;
+    color: #7b858c;
+}
+
+p.textinfo,span.reviewrate  {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 100px;
+}
+h6.totaltitle {
+    margin: 15px;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+}
+
+.pie{
+    height: 180px;
+    width: 320px;
+    float:left;
+    margin: 10px;
+    border-radius: 5px;
+}
+span#newuser,span#staruser  {
+    display: block;
+    font-size: 40px;
+    font-family: cursive;
+    position: absolute;
+    text-align: center;
+    width: 320px;
+    height: 100%;
+    margin-top: 20px;
+}
+.apisetting {
+    display: flex;
+    margin: 20px;
+    font-size: 16px;
+    line-height: 4px;
+}
+input.num {
+    display: block;
+    margin-left: 20px;
+    margin-top: -12px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+input.p-num {
+    display: block;
+    margin-top: -12px;
+    height: 30px;
+/*    text-indent: 10px;*/
+    line-height: 30px;
+    width: 55%;
+    border: 1px solid #ccc;
+}
+input#account,input#num {
+    height: 30px;
+    margin-top: -10px;
+}
+span.title {
+    font-size: 17px;
+    margin: 20px;
+    font-weight: 600;
+}
+button#saveapisetting {
+    margin: 20px 50px;
+}
+select#payperiod {
+    width: 55%;
+    margin-top: -10px;
+}
+label.package {
+    margin-left: 30px;
+}
+textarea.email{
+    border: solid 1px #ccc;
+    font-size: 16px;
+    margin: 10px auto;
+    line-height: 30px;
+}
+.invoicesearchbox {
+    display: block;
+    margin: 0px -10px;
+}
+select#discount {
+    display: block;
+    margin-top: -10px;
+}
+select#bank {
+    margin-top: -10px;
+    width: 52%;
+    padding: 0;
+}
+
+span.tip {
+    margin-left: 20px;
+    font-size: 13px;
+}
+label.usertype {
+    display: block;
+    margin: -10px auto;
+    margin-left: 0px;
+    padding: 0;
+}
+p.title{
+    margin: 0 0 10px;
+    width: 115px;
+}

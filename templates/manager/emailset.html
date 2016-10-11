@@ -1,0 +1,50 @@
+{{define "/emailset"}}
+{{template "header"}}
+{{template "nav"}}
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-cogs"></i>
+                <a href="#">邮箱配置</a>
+            </li>
+        </ul>
+    </div>
+    <div class="page-content">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>通知邮件列表</h3>
+                <p>该列表中的邮件均可以收到用户注册时的通知信息，一行一个邮件地址。</p>
+                <div class="emailsetbox" >
+                    <div class="emailsetting">
+                        <table id="emailbox">
+                        <tr><td><textarea class="email"  placeholder="输入需要收到通知邮件人的邮件地址" rows="10" cols="40"> </textarea></td></tr>
+                        </table></div>
+                  <!--  <button id="addemail"  class="btn-info btn btn-sm">添加邮箱</button>-->
+                    <button id="saveemail"  class="btn-success btn btn-sm">保存邮件清单</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+    <i class="icon-double-angle-up icon-only bigger-110"></i>
+</a>
+{{template "script"}}
+<script src="/js/setemail.js"></script>
+<script src="/layer/layer.js"></script>
+</script>
+{{template "footer"}}
+
+{{end}}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/lg.css">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+</head>
+
+<div class="wrapper">
+    <input type="checkbox" name="flipper_checkbox" id="flipper_checkbox" class="flipper_checkbox" hidden />
+    <div class="form_container">
+        <div class="form_login">
+            <h1 class="form_header">DeepIR Admin</h1>
+            <form id="loginForm" action="#" method="post" class="form">
+                <fieldset class="form_group">
+                    <label for="managername"><span class="label_icon fa fa-user"></span></label>
+                    <input id="managername" name="managername" class="form_element managername" type="text" placeholder="用户名/手机号/邮箱"  />
+                </fieldset>
+                <fieldset class="form_group">
+                    <label for="password"><span class="label_icon fa fa-lock"></span></label>
+                    <input id="password" name="password" class="form_element" type="password" placeholder="密码（不少于6位）"  />
+                </fieldset>
+                <fieldset class="form_group">
+                    <input class="form_button" type="button" value="登录" id="login"/>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<script src='assets/js/jquery-2.0.3.min.js'></script>
+<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+
+<script src="layer/layer.js"></script>
+
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>" + "<" + "/script>");
+</script>
+
+<script type="text/javascript">
+    if ("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+</script>
+
+
+<script type="text/javascript">
+    function show_box(id) {
+        jQuery('.widget-box.visible').removeClass('visible');
+        jQuery('#' + id).addClass('visible');
+    }
+</script>
+</body>
+</html>

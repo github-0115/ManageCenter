@@ -1,0 +1,59 @@
+{{define "/alldata"}}
+{{template "header"}}
+{{template "nav"}}
+        <div class="main-content">
+            <div class="breadcrumbs" id="breadcrumbs">
+                <script type="text/javascript">
+                    try {
+                        ace.settings.check('breadcrumbs', 'fixed')
+                    } catch (e) {}
+                </script>
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-bar-chart"></i>
+                    </li>
+                    <li>
+                        <a href="#">统计分析</a>
+                    </li>
+                    <li class="active">识别统计</li>
+                </ul>
+            </div>
+            <div class="page-content">
+                <div class="row">
+                    <div class="searchbox">
+                        <input id="autocomplete-search" class="searchtext" style="margin-left: 20px;margin-bottom: 20px;height: 35px;float:left;
+                            font-size: 15px;  vertical-align: bottom;" placeholder="输入您想查看用户名">
+                            <button class="bigger-120 btn-info btn btn-sm " id="search"
+                                style="float:left;margin-bottom: 20px;"><i class="icon-search"></i>搜索
+                            </button>
+                        </input>
+                    </div>
+                     <label id="lblUser" style="float:left;margin-left: 20px;margin-top: 5px;font-size: 20px;">
+                        当前查看全部的数据
+                    </label>
+                    <div class="col-xs-12">
+                        <table id="jqGrid"></table>
+                        <div id="jqGridPager"></div>
+                        <!-- PAGE CONTENT ENDS -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.page-content -->
+        </div>
+        <!-- /.main-content -->
+    </div>
+    <!-- /.main-container-inner -->
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="icon-double-angle-up icon-only bigger-110"></i>
+    </a>
+</div>
+<!-- /.main-container -->
+{{template "script"}}
+<script src="//cdn.bootcss.com/lodash.js/4.13.1/lodash.min.js"></script>
+<script type="text/javascript" src="/js/jquery.autocomplete.js"></script>
+<script src="/js/alldata.js"></script>
+{{template "footer"}}
+{{end}}
+

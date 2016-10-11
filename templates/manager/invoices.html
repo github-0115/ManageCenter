@@ -1,0 +1,63 @@
+{{define "/invoices"}}
+{{template "header"}}
+<link rel="stylesheet" href="/css/big_photo.css" />
+<style>
+    .layui-layer-btn .layui-layer-btn0 {
+        border-color: #4898d5;
+        background-color: #2e8ded;
+        color: #fff;
+        display: block;
+        margin: auto;
+        width: 100px;
+        text-align: center;
+        }
+</style>
+{{template "nav"}}
+            <div class="main-content">
+                <div class="breadcrumbs" id="breadcrumbs">
+                    <script type="text/javascript">
+                    try {
+                        ace.settings.check('breadcrumbs', 'fixed')
+                    } catch (e) {}
+                    </script>
+                    <ul class="breadcrumb">
+                        <li>
+                            <i class="icon-barcode"></i>
+                        </li>
+                        <li>
+                            <a href="#">开票申请列表</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="page-content">
+                        <div class="col-xs-12">
+                            <div class="invoicesearchbox">
+                                <input id="autocomplete-search" class="searchtext" style="margin-top: 10px;height: 35px;float:left;
+    font-size: 15px;  vertical-align: bottom;" placeholder="输入您想查看用户名">
+                                <button class="bigger-120 btn-info btn btn-sm " id="search"
+                                        style="float:left;margin-top: 10px"><i class="icon-search"></i>搜索
+                                </button>
+                                </input>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <table id="jqGrid"></table>
+                            <div id="jqGridPager"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="icon-double-angle-up icon-only bigger-110"></i>
+        </a>
+    </div>
+    {{template "script"}}
+    <script src="//cdn.bootcss.com/lodash.js/4.13.1/lodash.min.js"></script>
+    
+    <script src="/layer/layer.js"></script>
+    <script src="/js/invoices.js"></script>
+    <script type="text/javascript" src="/js/jquery.autocomplete.js"></script>
+    {{template "footer"}}
+    {{end}}

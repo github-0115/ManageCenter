@@ -1,0 +1,22 @@
+version: '2'
+services:
+  managecenter:
+    build:
+        context: ../
+        dockerfile: docker/Service
+    ports:
+     - "4321:80"
+    logging:
+        options:
+            max-file: 10
+            max-size: 50m
+    volumes:
+        - $MANAGECENTER_CONFIG:/config.json
+        - $MANAGECENTER_DBCONFIG:/db_config.json
+    depends_on:
+     - redis
+     - mongo
+  redis:
+    image: redis
+  mongo:
+    image: mongo

@@ -1,0 +1,49 @@
+{{define "/packageapply"}}
+{{template "header"}}
+{{template "nav"}}
+            <div class="main-content">
+                <div class="breadcrumbs" id="breadcrumbs">
+                    <script type="text/javascript">
+                    try {
+                        ace.settings.check('breadcrumbs', 'fixed')
+                    } catch (e) {}
+                    </script>
+                    <ul class="breadcrumb">
+                        <li>
+                            <i class="icon-barcode"></i>
+                            <a href="#">申请升级套餐列表</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="page-content">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="htmleaf-container" >
+                                <span class="deal">处理状态:</span>
+                                <ul id="title-ul" class="htmleaf-ul">
+                                    <li id="beforedeal">待处理</li>
+                                    <li id="afterdeal">已处理</li>
+                                    <li id="over" style="visibility: hidden">已完结</li>
+                                    <li class="slider"></li>
+                                </ul>
+                            </div>
+                            <table id="jqGrid"></table>
+                            <div id="jqGridPager"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="icon-double-angle-up icon-only bigger-110"></i>
+        </a>
+    </div>
+    {{template "script"}}
+    <script src="//cdn.bootcss.com/lodash.js/4.13.1/lodash.min.js"></script>
+    <script src="/layer/layer.js"></script>
+    <script src="/js/packageapply.js"></script>
+    <script type="text/javascript" src="/js/jquery.autocomplete.js"></script>
+    <script type="text/javascript" src="/js/title.js"></script>
+    {{template "footer"}}
+    {{end}}

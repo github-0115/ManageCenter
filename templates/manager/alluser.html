@@ -1,0 +1,55 @@
+{{define "/alluser"}}
+{{template "header"}}
+{{template "nav"}}
+<style>
+    .layui-layer-btn .layui-layer-btn0 {
+        border-color: #4898d5;
+        background-color: #2e8ded;
+        color: #fff;
+        display: block;
+        margin: auto;
+        width: 100px;
+        text-align: center;
+    }
+</style>
+
+            <div class="main-content">
+                <div class="breadcrumbs" id="breadcrumbs">
+                    <script type="text/javascript">
+                    try {
+                        ace.settings.check('breadcrumbs', 'fixed')
+                    } catch (e) {}
+                    </script>
+                    <ul class="breadcrumb">
+                        <li>
+                            <i class="icon-user"></i>
+                        </li>
+                        <li>
+                            <a href="#">用户管理</a>
+                        </li>
+                        <li class="active">已注册用户列表</li>
+                    </ul>
+                </div>
+                <div class="page-content">
+                    <div class="row">
+                        <div class="col-xs-12">
+
+                            <table id="jqGrid"></table>
+                            <div id="jqGridPager"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="icon-double-angle-up icon-only bigger-110"></i>
+        </a>
+    </div>
+    {{template "script"}}
+    <script src="//cdn.bootcss.com/lodash.js/4.13.1/lodash.min.js"></script>
+    <script src="/layer/layer.js"></script>
+    <script src="/js/find.js"></script>
+    <script type="text/javascript" src="/js/jquery.autocomplete.js"></script>
+
+    {{template "footer"}}
+    {{end}}

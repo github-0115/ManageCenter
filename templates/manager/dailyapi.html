@@ -1,0 +1,92 @@
+{{define "/dailyapi"}}
+{{template "header"}}
+{{template "nav"}}
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-bar-chart  active"></i>
+                <a href="#">数据中心</a>
+            </li>
+            <li class="active icon-double-angle-right">api调用统计</li>
+        </ul>
+    </div>
+    <div class="page-content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="widget-box transparent">
+
+                            <div class="htmleaf-container">
+                                <ul id ="title-ul" class="htmleaf-ul">
+                                    <li id="title-identify">鉴黄</li>
+                                    <li id="title-screen" >拍屏</li>
+                                    <li id="blank" style="visibility:hidden;"></li>
+                                    <li class="slider"></li>
+                                </ul>
+                                <div class="searchbox">
+                                    <input id="autocomplete-search" class="searchtext" style="margin-top: 42px;height: 35px;float:left;
+    font-size: 15px;  vertical-align: bottom;" placeholder="输入您想查看用户名">
+                                    <button class="bigger-120 btn-info btn btn-sm " id="search"
+                                            style="float:left;margin-top: 42px"><i class="icon-search"></i>搜索
+                                    </button>
+                                    </input>
+                                </div>
+                                <label id="lblSelect" style="float:right">
+                                    <select id="selectPointOfInterest" title="">
+                                        <option value="1">近1天</option>
+                                        <option value="7">近7天</option>
+                                        <option value="30">近30天</option>
+                                        <option class = "customss" value="custom">自定义</option>
+                                    </select>
+                                </label>
+                                <div class="input-daterange input-group" id="datepicker" style="display: none">
+                                    <input type="text" class="input-sm form-control" name="start" class="start" id="from" />
+                                    <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                                    <input type="text" class="input-sm form-control" name="end" class="end" id="to"/>
+                                </div>
+                            </div>
+                           <div class="widget-body">
+                                <div class="widget-main padding-4">
+                                    <div id="t-pie" style="position:absolute;margin-left:440px;margin-top:20px;width: 100%;">
+                                        <div id="n-pie" style="height: 180px;width: 320px;float:left;z-index:10000"></div>   
+                                        <div id="s-pie" style="height: 180px;width: 320px;float:left;z-index:10000"></div>
+                                        <div id="p-pie" style="height: 180px;width: 320px;float:left;z-index:10000"></div>
+                                    </div>
+                                    <div id="pie" style="height: 400px;width: 90%;float:left;z-index:100"></div>
+                                    <div style="clear:both"></div>
+                                    <div id="daily" style="height: 600px;width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+    <i class="icon-double-angle-up icon-only bigger-110"></i>
+</a>
+</div>
+{{template "script"}}
+{{template "chart"}}
+<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap-datepicker/1.6.4/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script src="/js/loadingoverlay.min.js"></script>
+<script type="text/javascript" src="/js/apistatistics.js"></script>
+<script type="text/javascript" src="/js/title.js"></script>
+</script>
+{{template "footer"}}
+
+{{end}}

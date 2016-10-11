@@ -1,0 +1,43 @@
+{
+    "redis": {
+        "host": "redis",
+        "port": 6379,
+        "db": 0,
+        "password": ""
+    },
+    "async_result_queue": "async_result",
+    "uc_mongo_task": {
+                "host": "dds-bp152cc74f3ddb141.mongodb.rds.aliyuncs.com",
+                "port": 3717,
+                "db": "developer",
+                "user": "developer",
+                "password": "15ba5aa50a361ffdd66938d3e1fe4d47"
+        },
+    "mc_mongo_task": {
+        "host": "dds-bp152cc74f3ddb141.mongodb.rds.aliyuncs.com",
+        "port": 3717,
+        "db": "managecenter",
+        "user": "manage",
+        "password": "25aef2a89629880f994740514e1cd186"
+    },
+ "stats_mongo": {
+        "host": "dds-bp152cc74f3ddb142.mongodb.rds.aliyuncs.com",
+        "port": 3717,
+        "db": "classifystats",
+        "user": "usercenter",
+        "password": "fa0f9e1247ceacba8c86848a54cb8bc7"
+    },
+    "demo_mongo": {
+        "host": "dds-bp152cc74f3ddb142.mongodb.rds.aliyuncs.com",
+        "port": 3717,
+        "db": "demo",
+        "user": "demo",
+        "password": "a968ea7dbcdd9b3702fc4db0b15353c3"
+    },
+    "api_daily_redis": {
+        "host": "10.117.194.110",
+        "port": 6385,
+        "db": 0,
+        "password": "GYiQVFEnBBneIQ=="
+    }
+}
